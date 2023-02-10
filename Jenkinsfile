@@ -13,6 +13,17 @@ pipeline{
                     git branch: 'main', url: 'https://github.com/ramakrishna8254/demoappwithsonar.git'
                 }
             }
+            
+            stage('UNIT testing'){
+            
+            steps{
+                
+                script{
+                    
+                    sh 'mvn test'
+                }
+            }
+        }
         }
         
         }
